@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_web_frame/flutter_web_frame.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:make_a_beat/screens/challenge_screen.dart';
 import 'package:make_a_beat/screens/welcome_screen.dart';
 import 'constants.dart';
 

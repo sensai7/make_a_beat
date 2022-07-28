@@ -3,8 +3,6 @@ import 'package:make_a_beat/screens/challenge_screen.dart';
 import 'package:make_a_beat/screens/stats_screen.dart';
 import 'package:make_a_beat/widgets/welcome_button.dart';
 import 'package:make_a_beat/widgets/welcome_social_button_group.dart';
-import '../controllers/challenge_brain.dart';
-import '../controllers/date_seed.dart';
 
 class WelcomeButtonGroup extends StatelessWidget {
   const WelcomeButtonGroup({
@@ -16,13 +14,13 @@ class WelcomeButtonGroup extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
-        WelcomeButton(
+        const WelcomeButton(
           text: "Daily challenge",
           whereTo: ChallengeScreen(
             isDaily: true,
           ),
         ),
-        WelcomeButton(
+        const WelcomeButton(
           text: "Random Challenge",
           whereTo: ChallengeScreen(
             isDaily: false,

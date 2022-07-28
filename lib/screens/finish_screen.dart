@@ -26,7 +26,7 @@ class FinishScreen extends StatelessWidget {
         body: WillPopScope(
           onWillPop: () {
             Navigator.pushAndRemoveUntil(
-                context, MaterialPageRoute(builder: (context) => WelcomeScreen()), (route) => false);
+                context, MaterialPageRoute(builder: (context) => const WelcomeScreen()), (route) => false);
             return Future.value(false);
           },
           child: Container(
@@ -59,7 +59,7 @@ class FinishScreen extends StatelessWidget {
                       ),
                       maxLines: 1,
                     ),
-                    FinishSocialButtonGroup(),
+                    const FinishSocialButtonGroup(),
                     AutoSizeText(
                       "TWEAK YOUR BEAT",
                       style: GoogleFonts.redHatDisplay(
@@ -96,7 +96,7 @@ class FinishScreen extends StatelessWidget {
                       ),
                       maxLines: 1,
                     ),
-                    WelcomeButton(
+                    const WelcomeButton(
                       text: "Return to home",
                       whereTo: WelcomeScreen(),
                     ),

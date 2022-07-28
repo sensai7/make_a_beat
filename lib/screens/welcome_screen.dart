@@ -59,7 +59,7 @@ class WelcomeFooter extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
-      children: [
+      children: const [
         Text("MAKE A BEAT v0.0.1"),
         //Text("About"), //todo make screen
       ],

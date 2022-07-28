@@ -16,7 +16,6 @@ class WelcomeButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print("welcome build");
     return Row(
       children: [
         Expanded(flex: 3, child: Container()),
@@ -25,7 +24,7 @@ class WelcomeButton extends StatelessWidget {
           child: ElevatedButton(
             style: ButtonStyle(
               backgroundColor: MaterialStateProperty.all<Color>(kColorText),
-              minimumSize: MaterialStateProperty.all<Size>(Size(1, 50)),
+              minimumSize: MaterialStateProperty.all<Size>(const Size(1, 50)),
             ),
             onPressed: () {
               Navigator.push(
