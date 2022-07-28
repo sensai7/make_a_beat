@@ -1,3 +1,3 @@
-# make_a_beat
+# Make a Beat
 
 Make a new dance beat everyday WIP
