@@ -60,7 +60,7 @@ class WelcomeFooter extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Text("MAKE A BEAT v0.0.1."),
+        Text("MAKE A BEAT v0.0.1"),
         //Text("About"), //todo make screen
       ],
     );
