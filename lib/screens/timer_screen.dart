@@ -10,6 +10,7 @@ import 'package:make_a_beat/screens/finish_screen.dart';
 import 'package:make_a_beat/screens/welcome_screen.dart';
 import 'package:make_a_beat/widgets/challenge_top.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:wakelock/wakelock.dart';
 import '../widgets/timer_button.dart';
 import '../widgets/timer_display_timer.dart';
 import '../widgets/timer_prompt_bullet_list.dart';
@@ -69,6 +70,9 @@ class _TimerScreenState extends State<TimerScreen> {
     // force portrait orientation
     SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
 
+    // force awake screen
+    Wakelock.enable();
+
     // Controllers
     DateSeed dateSeed = DateSeed();
 
@@ -79,7 +83,7 @@ class _TimerScreenState extends State<TimerScreen> {
             builder: (context) => AlertDialog(
               backgroundColor: kColorBackground,
               title: const Text('Exit screen'),
-              content: const Text('Do you want to return to the challenge screen?'),
+              content: const Text('Do you want to return to the main screen?'),
               actions: [
                 ElevatedButton(
                   style: ButtonStyle(

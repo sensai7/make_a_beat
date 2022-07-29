@@ -28,7 +28,7 @@ class _StatsScreenState extends State<StatsScreen> {
     _loadCounter();
   }
 
-  //fixme cookies for web?
+  //soft fix me cookies for web? not a priority, first lets get the android app rolling
   Future<void> _loadCounter() async {
     final prefs = await SharedPreferences.getInstance();
     setState(() {
@@ -42,7 +42,7 @@ class _StatsScreenState extends State<StatsScreen> {
   Widget build(BuildContext context) {
     SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
 
-    // todo other stats
+    // soft todo other stats
 
     return SafeArea(
       child: Scaffold(

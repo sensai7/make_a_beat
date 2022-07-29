@@ -1,6 +1,7 @@
 import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:wakelock/wakelock.dart';
 import '../widgets/welcome_title.dart';
 import '../widgets/welcome_button_group.dart';
 
@@ -21,6 +22,9 @@ class WelcomeScreen extends StatelessWidget {
     addBoot();
 
     // todo disable daily if its already done
+
+    // disable awake screen
+    Wakelock.disable();
 
     return SafeArea(
       child: Scaffold(

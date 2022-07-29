@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:make_a_beat/controllers/challenge_brain.dart';
 import 'package:make_a_beat/screens/welcome_screen.dart';
+import 'package:wakelock/wakelock.dart';
 import '../controllers/date_seed.dart';
 import '../widgets/challenge_top.dart';
 import '../widgets/finish_social_button_group.dart';
@@ -21,6 +22,10 @@ class FinishScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
     DateSeed dateSeed = DateSeed();
+
+    // disable awake screen
+    Wakelock.disable();
+
     return SafeArea(
       child: Scaffold(
         body: WillPopScope(

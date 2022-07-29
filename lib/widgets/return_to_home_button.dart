@@ -31,10 +31,10 @@ class ReturnToHomeButton extends StatelessWidget {
                     );
             },
             child: Text(
-              "Return to home",
+              "Return to main screen",
               style: GoogleFonts.redHatDisplay(
                 fontWeight: FontWeight.w700,
-                fontSize: 18,
+                fontSize: 16,
                 color: kColorBackground,
               ),
             ),
