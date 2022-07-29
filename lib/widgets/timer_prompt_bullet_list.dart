@@ -5,9 +5,9 @@ import 'package:google_fonts/google_fonts.dart';
 import '../controllers/challenge_brain.dart';
 
 class TimerPromptBulletList extends StatelessWidget {
-  TimerPromptBulletList({Key? key, required this.challenge}) : super(key: key);
+  const TimerPromptBulletList({Key? key, required this.challenge}) : super(key: key);
 
-  ChallengeBrain challenge;
+  final ChallengeBrain challenge;
 
   @override
   Widget build(BuildContext context) {

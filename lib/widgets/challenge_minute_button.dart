@@ -1,16 +1,8 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
-import 'package:flutter_countdown_timer/countdown_timer_controller.dart';
-import 'package:flutter_countdown_timer/current_remaining_time.dart';
-import 'package:flutter_countdown_timer/flutter_countdown_timer.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:make_a_beat/screens/challenge_screen.dart';
-import 'package:make_a_beat/widgets/timer_display_timer.dart';
 import '../constants.dart';
 import '../controllers/challenge_brain.dart';
 import '../screens/three_two_one_screen.dart';
-import '../screens/timer_screen.dart';
 
 class ChallengeMinuteButton extends StatelessWidget {
   const ChallengeMinuteButton({

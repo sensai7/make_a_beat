@@ -11,7 +11,6 @@ class WelcomeScreen extends StatelessWidget {
   Future<void> addBoot() async {
     final prefs = await SharedPreferences.getInstance();
     final counter = prefs.getInt('nBoots') ?? 0;
-    print("nBoots $counter");
     await prefs.setInt('nBoots', counter + 1);
   }
 
