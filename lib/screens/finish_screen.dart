@@ -7,7 +7,7 @@ import 'package:make_a_beat/screens/welcome_screen.dart';
 import '../controllers/date_seed.dart';
 import '../widgets/challenge_top.dart';
 import '../widgets/finish_social_button_group.dart';
-import '../widgets/welcome_button.dart';
+import '../widgets/return_to_home_button.dart';
 
 class FinishScreen extends StatelessWidget {
   const FinishScreen({
@@ -96,10 +96,7 @@ class FinishScreen extends StatelessWidget {
                       ),
                       maxLines: 1,
                     ),
-                    const WelcomeButton(
-                      text: "Return to home",
-                      whereTo: WelcomeScreen(),
-                    ),
+                    const ReturnToHomeButton(isPop: false),
                   ],
                 )),
               ],

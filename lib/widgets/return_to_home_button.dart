@@ -1,16 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:make_a_beat/screens/welcome_screen.dart';
 import '../constants.dart';
 
-class WelcomeButton extends StatelessWidget {
-  const WelcomeButton({
-    Key? key,
-    required this.text,
-    required this.whereTo,
-  }) : super(key: key);
+class ReturnToHomeButton extends StatelessWidget {
+  const ReturnToHomeButton({Key? key, required this.isPop}) : super(key: key);
 
-  final Widget whereTo;
-  final String text;
+  final bool isPop;
 
   @override
   Widget build(BuildContext context) {
@@ -25,17 +21,17 @@ class WelcomeButton extends StatelessWidget {
               minimumSize: MaterialStateProperty.all<Size>(const Size(1, 50)),
             ),
             onPressed: () {
-              //todo send to a 3 2 1 screen passing the whereTo. It's at the end of the 3 2 1 when the screen goes to
-              // whereTo
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) {
-                  return whereTo;
-                }),
-              );
+              isPop
+                  ? Navigator.pop(context)
+                  : Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) {
+                        return const WelcomeScreen();
+                      }),
+                    );
             },
             child: Text(
-              text,
+              "Return to home",
               style: GoogleFonts.redHatDisplay(
                 fontWeight: FontWeight.w700,
                 fontSize: 18,

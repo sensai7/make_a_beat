@@ -9,7 +9,6 @@ import 'constants.dart';
 void main() {
   if (defaultTargetPlatform == TargetPlatform.iOS || defaultTargetPlatform == TargetPlatform.android) {
     // ensures black navigation bar on android
-    //todo top bar being wonky
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark);
     WidgetsFlutterBinding.ensureInitialized();
     SystemChrome.setEnabledSystemUIOverlays([

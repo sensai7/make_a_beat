@@ -14,6 +14,7 @@ class WelcomeButtonGroup extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
+        //todo change to disabled button if daily is completed. Also toast the user if presses disabled button
         const WelcomeButton(
           text: "Daily challenge",
           whereTo: ChallengeScreen(

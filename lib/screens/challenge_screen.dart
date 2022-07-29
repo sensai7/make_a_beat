@@ -6,6 +6,8 @@ import '../widgets/challenge_bottom_bar.dart';
 import '../widgets/challenge_info.dart';
 import '../widgets/challenge_top.dart';
 
+//todo animations
+
 class ChallengeScreen extends StatelessWidget {
   const ChallengeScreen({
     Key? key,

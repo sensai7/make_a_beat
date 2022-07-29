@@ -1,14 +1,26 @@
 import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../widgets/welcome_title.dart';
 import '../widgets/welcome_button_group.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({Key? key}) : super(key: key);
 
+  Future<void> addBoot() async {
+    final prefs = await SharedPreferences.getInstance();
+    final counter = prefs.getInt('nBoots') ?? 0;
+    print("nBoots $counter");
+    await prefs.setInt('nBoots', counter + 1);
+  }
+
   @override
   Widget build(BuildContext context) {
     SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
+
+    addBoot();
+
+    // todo disable daily if its already done
 
     return SafeArea(
       child: Scaffold(
