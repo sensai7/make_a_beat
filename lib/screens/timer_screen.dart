@@ -9,6 +9,7 @@ import 'package:make_a_beat/controllers/date_seed.dart';
 import 'package:make_a_beat/screens/finish_screen.dart';
 import 'package:make_a_beat/widgets/challenge_top.dart';
 import 'package:make_a_beat/widgets/welcome_button.dart';
+import '../widgets/timer_button.dart';
 import '../widgets/timer_display_timer.dart';
 import '../widgets/timer_prompt_bullet_list.dart';
 
@@ -143,11 +144,9 @@ class _TimerScreenState extends State<TimerScreen> {
                             return timerWidgetBuilder(time: time);
                           }),
                       TimerPromptBulletList(challenge: widget.challenge),
-                      WelcomeButton(
+                      TimerButton(
                         text: "END",
-                        whereTo: FinishScreen(
-                          challenge: widget.challenge,
-                        ),
+                        onTap: onTimerEnd,
                       ),
                     ],
                   ),
