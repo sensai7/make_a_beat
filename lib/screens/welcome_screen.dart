@@ -71,7 +71,6 @@ class WelcomeFooter extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: const [
         Text("MAKE A BEAT v0.0.1"),
-        //Text("About"), //todo make screen
       ],
     );
   }

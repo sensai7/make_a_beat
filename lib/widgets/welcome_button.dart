@@ -25,8 +25,6 @@ class WelcomeButton extends StatelessWidget {
               minimumSize: MaterialStateProperty.all<Size>(const Size(1, 50)),
             ),
             onPressed: () {
-              //todo send to a 3 2 1 screen passing the whereTo. It's at the end of the 3 2 1 when the screen goes to
-              // whereTo
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) {
