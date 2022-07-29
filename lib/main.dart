@@ -11,9 +11,9 @@ void main() {
     // ensures black navigation bar on android
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark);
     WidgetsFlutterBinding.ensureInitialized();
-    SystemChrome.setEnabledSystemUIOverlays([
-      SystemUiOverlay.bottom, //This line is used for showing the bottom bar
-    ]);
+    SystemChrome.setEnabledSystemUIMode(
+      SystemUiMode.leanBack, //This line is used for showing the bottom bar
+    );
   } else if (defaultTargetPlatform == TargetPlatform.linux ||
       defaultTargetPlatform == TargetPlatform.macOS ||
       defaultTargetPlatform == TargetPlatform.windows) {
