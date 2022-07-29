@@ -1,5 +1,7 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../widgets/return_to_home_button.dart';
@@ -17,12 +19,7 @@ class _StatsScreenState extends State<StatsScreen> {
   var statsData = {
     "nBoots": 0,
     "nChallenges": 0,
-    // "": 0,
-    // "": 0,
-    // "": 0,
-    // "": 0,
-    // "": 0,
-    // "": 0,
+    "nDailyChallenges": 0,
   };
 
   @override
@@ -37,6 +34,7 @@ class _StatsScreenState extends State<StatsScreen> {
     setState(() {
       statsData["nBoots"] = (prefs.getInt('nBoots') ?? 0);
       statsData["nChallenges"] = (prefs.getInt('nChallenges') ?? 0);
+      statsData["nDailyChallenges"] = (prefs.getInt('nDailyChallenges') ?? 0);
     });
   }
 
@@ -44,8 +42,7 @@ class _StatsScreenState extends State<StatsScreen> {
   Widget build(BuildContext context) {
     SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
 
-    // todo general formatting
-    // todo all the other stats
+    // todo other stats
 
     return SafeArea(
       child: Scaffold(
@@ -53,13 +50,31 @@ class _StatsScreenState extends State<StatsScreen> {
           margin: const EdgeInsets.symmetric(horizontal: 25.0),
           child: Column(
             children: [
-              //Text("Number of boots: ${_statsData["nBoots"]}"),
-              Text("Daily challenge streak: "),
-              Text("Last daily challenge:"),
-              Text("Finished daily challenges:"),
-              Text("Finished challenges: ${statsData["nChallenges"]}"),
-              Text("Average completion time:"),
-              const ReturnToHomeButton(isPop: true),
+              Expanded(
+                  child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  AutoSizeText(
+                    "Finished challenges: ${statsData['nChallenges']}",
+                    style: GoogleFonts.redHatDisplay(
+                      fontWeight: FontWeight.w900,
+                      fontSize: 40,
+                      height: 1,
+                    ),
+                    maxLines: 1,
+                  ),
+                  AutoSizeText(
+                    "Finished daily challenges: ${statsData['nDailyChallenges']}",
+                    style: GoogleFonts.redHatDisplay(
+                      fontWeight: FontWeight.w900,
+                      fontSize: 100,
+                      height: 1,
+                    ),
+                    maxLines: 1,
+                  ),
+                  const ReturnToHomeButton(isPop: true),
+                ],
+              )),
             ],
           ),
         ),

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_countdown_timer/countdown_timer_controller.dart';
 import 'package:flutter_countdown_timer/current_remaining_time.dart';
 import 'package:flutter_countdown_timer/flutter_countdown_timer.dart';
-
 import '../controllers/challenge_brain.dart';
 import '../screens/timer_screen.dart';
 import '../widgets/three_two_one_display_timer.dart';
@@ -25,13 +24,6 @@ class _ThreeTwoOneScreenState extends State<ThreeTwoOneScreen> {
   late CountdownTimerController controller;
   int endTime = 0;
 
-  @override
-  void initState() {
-    super.initState();
-    int endTime = DateTime.now().millisecondsSinceEpoch + 1000 * 4;
-    controller = CountdownTimerController(endTime: endTime, onEnd: onTimerEnd);
-  }
-
   void onTimerEnd() {
     Navigator.push(
       context,
@@ -39,6 +31,26 @@ class _ThreeTwoOneScreenState extends State<ThreeTwoOneScreen> {
         return TimerScreen(time: widget.time, challenge: widget.challenge);
       }),
     );
+  }
+
+  StatelessWidget timerWidgetBuilder({CurrentRemainingTime? time}) {
+    if (time == null) {
+      return const Text("0");
+    } else {
+      String seconds;
+      seconds = time.sec.toString();
+
+      return ThreeTwoOneDisplayTimer(
+        seconds: seconds,
+      );
+    }
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    int endTime = DateTime.now().millisecondsSinceEpoch + 1000 * 4;
+    controller = CountdownTimerController(endTime: endTime, onEnd: onTimerEnd);
   }
 
   @override
@@ -54,18 +66,5 @@ class _ThreeTwoOneScreenState extends State<ThreeTwoOneScreen> {
             }),
       ),
     );
-  }
-
-  StatelessWidget timerWidgetBuilder({CurrentRemainingTime? time}) {
-    if (time == null) {
-      return const Text("0");
-    } else {
-      String seconds;
-      seconds = time.sec.toString();
-
-      return ThreeTwoOneDisplayTimer(
-        seconds: seconds,
-      );
-    }
   }
 }

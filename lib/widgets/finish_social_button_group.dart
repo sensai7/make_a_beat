@@ -4,8 +4,8 @@ import 'package:make_a_beat/widgets/social_button.dart';
 
 // https://twitter.com/intent/tweet?button_hashtag=MakeABeat ?
 String twitterUrl = 'https://twitter.com/compose/tweet?hashtags=MakeABeat';
-String instagramUrl = 'https://www.instagram.com/'; //fixme better link
-String tiktokUrl = 'https://www.tiktok.com/'; //fixme better link
+String instagramUrl = 'https://www.instagram.com/'; //'soft' fix me better link
+String tiktokUrl = 'https://www.tiktok.com/'; // 'soft' fix me better link
 
 class FinishSocialButtonGroup extends StatelessWidget {
   const FinishSocialButtonGroup({
