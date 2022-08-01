@@ -15,8 +15,6 @@ import '../widgets/timer_button.dart';
 import '../widgets/timer_display_timer.dart';
 import '../widgets/timer_prompt_bullet_list.dart';
 
-//todo keep screen on -> see wake lock and add <uses-permission android:name="android.permission.WAKE_LOCK" />
-
 class TimerScreen extends StatefulWidget {
   const TimerScreen({
     Key? key,

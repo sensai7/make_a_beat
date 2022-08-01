@@ -1,4 +1,5 @@
 import 'dart:ui';
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -12,17 +13,24 @@ class ThreeTwoOneDisplayTimer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      seconds,
-      style: GoogleFonts.redHatDisplay(
-        fontWeight: FontWeight.w900,
-        fontSize: 150,
-        height: 1,
-        fontFeatures: <FontFeature>[
-          const FontFeature.tabularFigures(),
-        ],
-      ),
-      maxLines: 1,
+    return AnimatedTextKit(
+      animatedTexts: [
+        RotateAnimatedText(
+          seconds,
+          textStyle: GoogleFonts.redHatDisplay(
+            fontWeight: FontWeight.w900,
+            fontSize: 150,
+            height: 1,
+            fontFeatures: <FontFeature>[
+              const FontFeature.tabularFigures(),
+            ],
+          ),
+          duration: Duration(milliseconds: 1010),
+        ),
+      ],
+      pause: Duration(milliseconds: 0),
+      displayFullTextOnTap: false,
+      stopPauseOnTap: false,
     );
   }
 }
