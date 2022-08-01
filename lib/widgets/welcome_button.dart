@@ -3,7 +3,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../constants.dart';
 import '../controllers/date_seed.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 //needs to be stateful to disable the daily challenge since it reads the state from a future
 class WelcomeButton extends StatefulWidget {

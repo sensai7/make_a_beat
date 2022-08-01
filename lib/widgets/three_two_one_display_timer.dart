@@ -25,10 +25,10 @@ class ThreeTwoOneDisplayTimer extends StatelessWidget {
               const FontFeature.tabularFigures(),
             ],
           ),
-          duration: Duration(milliseconds: 1010),
+          duration: const Duration(milliseconds: 1010),
         ),
       ],
-      pause: Duration(milliseconds: 0),
+      pause: const Duration(milliseconds: 0),
       displayFullTextOnTap: false,
       stopPauseOnTap: false,
     );

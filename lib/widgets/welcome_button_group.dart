@@ -4,8 +4,6 @@ import 'package:make_a_beat/screens/stats_screen.dart';
 import 'package:make_a_beat/widgets/welcome_button.dart';
 import 'package:make_a_beat/widgets/welcome_social_button_group.dart';
 
-import '../controllers/date_seed.dart';
-
 class WelcomeButtonGroup extends StatelessWidget {
   const WelcomeButtonGroup({
     Key? key,
@@ -25,7 +23,7 @@ class WelcomeButtonGroup extends StatelessWidget {
         ),
         const WelcomeButton(
           text: "Random Challenge",
-          whereTo: const ChallengeScreen(
+          whereTo: ChallengeScreen(
             isDaily: false,
           ),
           isDaily: false,
