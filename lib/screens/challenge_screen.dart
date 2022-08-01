@@ -6,7 +6,7 @@ import '../widgets/challenge_bottom_bar.dart';
 import '../widgets/challenge_info.dart';
 import '../widgets/challenge_top.dart';
 
-//todo animations
+//todo animations. Is it worth it?
 
 class ChallengeScreen extends StatelessWidget {
   const ChallengeScreen({

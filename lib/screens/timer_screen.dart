@@ -48,12 +48,15 @@ class _TimerScreenState extends State<TimerScreen> {
     if (isDaily) {
       final nDailyChallenges = prefs.getInt('nDailyChallenges') ?? 0;
       await prefs.setInt('nDailyChallenges', nDailyChallenges + 1);
+      DateSeed dateSeed = DateSeed();
+      await prefs.setBool(dateSeed.formattedDate, true);
     }
   }
 
   void onTimerEnd() {
     changeStats(widget.challenge.isDaily);
     Wakelock.disable();
+
     Navigator.push(
       context,
       MaterialPageRoute(builder: (context) {

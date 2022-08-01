@@ -20,11 +20,6 @@ class WelcomeScreen extends StatelessWidget {
 
     addBoot();
 
-    // todo disable daily if its already done
-
-    // disable awake screen
-    Wakelock.disable();
-
     return SafeArea(
       child: Scaffold(
         body: Container(

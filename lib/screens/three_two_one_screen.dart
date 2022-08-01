@@ -62,7 +62,7 @@ class _ThreeTwoOneScreenState extends State<ThreeTwoOneScreen> {
   @override
   void initState() {
     super.initState();
-    // fixme material, probably: The extra 1ms softens a lot the animation but starts the number of seconds in 4 so it
+    // fixme material, probably: The extra 10ms softens a lot the animation but starts the number of seconds in 4 so it
     // has to -1 in the display widget. Refer to the (time.sec! - 1).toString(); in timerWidgetBuilder
     int endTime = DateTime.now().millisecondsSinceEpoch + 1000 * 4 + 10;
 
