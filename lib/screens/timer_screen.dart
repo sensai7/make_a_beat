@@ -38,6 +38,7 @@ class _TimerScreenState extends State<TimerScreen> {
   @override
   void initState() {
     super.initState();
+    Wakelock.enable();
     int endTime = DateTime.now().millisecondsSinceEpoch + 1000 * (widget.time * 60 + 1);
     controller = CountdownTimerController(endTime: endTime, onEnd: onTimerEnd);
   }
@@ -54,7 +55,7 @@ class _TimerScreenState extends State<TimerScreen> {
 
   void onTimerEnd() {
     changeStats(widget.challenge.isDaily);
-
+    Wakelock.disable();
     Navigator.push(
       context,
       MaterialPageRoute(builder: (context) {
@@ -97,8 +98,11 @@ class _TimerScreenState extends State<TimerScreen> {
                     backgroundColor: MaterialStateProperty.all<Color>(kColorText),
                   ),
                   //onPressed: () => Navigator.of(context).pop(true),
-                  onPressed: () => Navigator.pushAndRemoveUntil(
-                      context, MaterialPageRoute(builder: (context) => const WelcomeScreen()), (route) => false),
+                  onPressed: () {
+                    Wakelock.disable();
+                    Navigator.pushAndRemoveUntil(
+                        context, MaterialPageRoute(builder: (context) => const WelcomeScreen()), (route) => false);
+                  },
                   child: const Text('Yes', style: TextStyle(color: kColorBackground)),
                 ),
               ],
