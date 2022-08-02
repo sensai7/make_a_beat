@@ -4,7 +4,6 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../widgets/welcome_title.dart';
 import '../widgets/welcome_button_group.dart';
 import '../widgets/welcome_footer.dart';
-import 'about_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({Key? key}) : super(key: key);

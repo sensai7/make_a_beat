@@ -11,18 +11,18 @@ class WelcomeFooter extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Text("MAKE A BEAT v0.1 "),
-        SizedBox(width: 15),
+        const Text("MAKE A BEAT v0.1 "),
+        const SizedBox(width: 15),
         GestureDetector(
           onTap: () {
             Navigator.push(
               context,
               MaterialPageRoute(builder: (context) {
-                return AboutScreen();
+                return const AboutScreen();
               }),
             );
           },
-          child: Text(
+          child: const Text(
             "About",
             style: TextStyle(
               decoration: TextDecoration.underline,

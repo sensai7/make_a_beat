@@ -31,7 +31,7 @@ class AboutScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              SizedBox(height: 30),
+              const SizedBox(height: 30),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -46,10 +46,10 @@ class AboutScreen extends StatelessWidget {
                       style: kAboutUnderlinedTextStyle,
                     ),
                   ),
-                  FlutterLogo(),
+                  const FlutterLogo(),
                 ],
               ),
-              SizedBox(height: 5),
+              const SizedBox(height: 5),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -66,9 +66,9 @@ class AboutScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              Spacer(),
+              const Spacer(),
               const ReturnToHomeButton(isPop: true),
-              SizedBox(height: 30),
+              const SizedBox(height: 30),
             ],
             //https://www.freepik.com/author/dgim-studio
           ),

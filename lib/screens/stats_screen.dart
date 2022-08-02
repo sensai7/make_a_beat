@@ -53,7 +53,7 @@ class _StatsScreenState extends State<StatsScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              SizedBox(height: 30),
+              const SizedBox(height: 30),
               AutoSizeText(
                 "Finished challenges: ${statsData['nChallenges']}",
                 style: GoogleFonts.redHatDisplay(
@@ -63,7 +63,7 @@ class _StatsScreenState extends State<StatsScreen> {
                 ),
                 maxLines: 1,
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               AutoSizeText(
                 "Finished daily challenges: ${statsData['nDailyChallenges']}",
                 style: GoogleFonts.redHatDisplay(
@@ -73,9 +73,9 @@ class _StatsScreenState extends State<StatsScreen> {
                 ),
                 maxLines: 1,
               ),
-              Spacer(),
+              const Spacer(),
               const ReturnToHomeButton(isPop: true),
-              SizedBox(height: 30),
+              const SizedBox(height: 30),
             ],
             //https://www.freepik.com/author/dgim-studio
           ),

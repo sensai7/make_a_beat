@@ -158,8 +158,8 @@ class _TimerScreenState extends State<TimerScreen> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 80),
+                      const Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 50),
                         child: Image(
                           image: AssetImage(
                             "images/tape.png",
