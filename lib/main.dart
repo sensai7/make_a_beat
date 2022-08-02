@@ -12,7 +12,7 @@ void main() {
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark);
     WidgetsFlutterBinding.ensureInitialized();
     SystemChrome.setEnabledSystemUIMode(
-      SystemUiMode.leanBack, //This line is used for showing the bottom bar
+      SystemUiMode.edgeToEdge, //This line is used for showing the bottom bar
     );
   } else if (defaultTargetPlatform == TargetPlatform.linux ||
       defaultTargetPlatform == TargetPlatform.macOS ||

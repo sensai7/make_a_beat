@@ -32,6 +32,7 @@ class ReturnToHomeButton extends StatelessWidget {
             },
             child: Text(
               "Return to main screen",
+              textAlign: TextAlign.center,
               style: GoogleFonts.redHatDisplay(
                 fontWeight: FontWeight.w700,
                 fontSize: 16,

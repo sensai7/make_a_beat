@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../widgets/welcome_title.dart';
 import '../widgets/welcome_button_group.dart';
+import 'about_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({Key? key}) : super(key: key);
@@ -66,8 +67,25 @@ class WelcomeFooter extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
-      children: const [
-        Text("MAKE A BEAT v0.0.1"),
+      children: [
+        Text("MAKE A BEAT v0.1 "),
+        SizedBox(width: 15),
+        GestureDetector(
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) {
+                return AboutScreen();
+              }),
+            );
+          },
+          child: Text(
+            "About",
+            style: TextStyle(
+              decoration: TextDecoration.underline,
+            ),
+          ),
+        ),
       ],
     );
   }
