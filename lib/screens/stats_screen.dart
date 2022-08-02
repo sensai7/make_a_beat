@@ -49,33 +49,35 @@ class _StatsScreenState extends State<StatsScreen> {
         body: Container(
           margin: const EdgeInsets.symmetric(horizontal: 25.0),
           child: Column(
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Expanded(
-                  child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  AutoSizeText(
-                    "Finished challenges: ${statsData['nChallenges']}",
-                    style: GoogleFonts.redHatDisplay(
-                      fontWeight: FontWeight.w900,
-                      fontSize: 40,
-                      height: 1,
-                    ),
-                    maxLines: 1,
-                  ),
-                  AutoSizeText(
-                    "Finished daily challenges: ${statsData['nDailyChallenges']}",
-                    style: GoogleFonts.redHatDisplay(
-                      fontWeight: FontWeight.w900,
-                      fontSize: 40,
-                      height: 1,
-                    ),
-                    maxLines: 1,
-                  ),
-                  const ReturnToHomeButton(isPop: true),
-                ],
-              )),
+              SizedBox(height: 30),
+              AutoSizeText(
+                "Finished challenges: ${statsData['nChallenges']}",
+                style: GoogleFonts.redHatDisplay(
+                  fontWeight: FontWeight.w900,
+                  fontSize: 40,
+                  height: 1,
+                ),
+                maxLines: 1,
+              ),
+              SizedBox(height: 10),
+              AutoSizeText(
+                "Finished daily challenges: ${statsData['nDailyChallenges']}",
+                style: GoogleFonts.redHatDisplay(
+                  fontWeight: FontWeight.w900,
+                  fontSize: 40,
+                  height: 1,
+                ),
+                maxLines: 1,
+              ),
+              Spacer(),
+              const ReturnToHomeButton(isPop: true),
+              SizedBox(height: 30),
             ],
+            //https://www.freepik.com/author/dgim-studio
           ),
         ),
       ),

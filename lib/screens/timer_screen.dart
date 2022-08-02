@@ -15,6 +15,8 @@ import '../widgets/timer_button.dart';
 import '../widgets/timer_display_timer.dart';
 import '../widgets/timer_prompt_bullet_list.dart';
 
+//todo fit this screen style to stats/about page
+
 class TimerScreen extends StatefulWidget {
   const TimerScreen({
     Key? key,
