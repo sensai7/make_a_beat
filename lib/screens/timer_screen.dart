@@ -156,9 +156,13 @@ class _TimerScreenState extends State<TimerScreen> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      const Image(
-                        //todo hacer grafico de el tape recorder y sustituir
-                        image: AssetImage("images/water.png"),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 80),
+                        child: Image(
+                          image: AssetImage(
+                            "images/tape.png",
+                          ),
+                        ),
                       ),
                       CountdownTimer(
                           controller: controller,

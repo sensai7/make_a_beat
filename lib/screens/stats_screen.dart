@@ -67,7 +67,7 @@ class _StatsScreenState extends State<StatsScreen> {
                     "Finished daily challenges: ${statsData['nDailyChallenges']}",
                     style: GoogleFonts.redHatDisplay(
                       fontWeight: FontWeight.w900,
-                      fontSize: 100,
+                      fontSize: 40,
                       height: 1,
                     ),
                     maxLines: 1,
