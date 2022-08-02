@@ -11,3 +11,16 @@ TextStyle kTimerTextStyle = GoogleFonts.redHatMono(
   fontSize: 120,
   height: 1,
 );
+
+TextStyle kAboutTextStyle = GoogleFonts.redHatDisplay(
+  fontWeight: FontWeight.w500,
+  fontSize: 20,
+  height: 1,
+);
+
+TextStyle kAboutUnderlinedTextStyle = GoogleFonts.redHatDisplay(
+  fontWeight: FontWeight.w500,
+  fontSize: 20,
+  height: 1,
+  decoration: TextDecoration.underline,
+);

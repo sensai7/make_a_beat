@@ -2,6 +2,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../constants.dart';
 import '../widgets/return_to_home_button.dart';
 
 class AboutScreen extends StatelessWidget {
@@ -30,44 +31,44 @@ class AboutScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              SizedBox(height: 30),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Text("App made with "),
+                  Text("App made with ", style: kAboutTextStyle),
                   GestureDetector(
                     onTap: () {
                       openURL("https://flutter.dev");
                     },
                     child: Text(
                       "Flutter",
-                      style: TextStyle(
-                        decoration: TextDecoration.underline,
-                      ),
+                      style: kAboutUnderlinedTextStyle,
                     ),
                   ),
                   FlutterLogo(),
                 ],
               ),
+              SizedBox(height: 5),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Text("Cassete vector created by "),
+                  Text("Cassete vector created by ", style: kAboutTextStyle),
                   GestureDetector(
                     onTap: () {
                       openURL("https://www.freepik.com/author/dgim-studio");
                     },
                     child: Text(
                       "dgim-studio",
-                      style: TextStyle(
-                        decoration: TextDecoration.underline,
-                      ),
+                      style: kAboutUnderlinedTextStyle,
                     ),
                   ),
                 ],
               ),
+              Spacer(),
               const ReturnToHomeButton(isPop: true),
+              SizedBox(height: 30),
             ],
             //https://www.freepik.com/author/dgim-studio
           ),
